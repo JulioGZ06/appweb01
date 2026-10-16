@@ -2,9 +2,21 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/home')
 def home():
-    return render_template('index.html')
+    return render_template('index.html',titulo ="Universidad de Leon" , mensaje ="Bienvenido ala pagina de inicio")
+
+@app.route('/servicios')
+def servicios():
+    return render_template('servicios.html',titulo ="servicios" , mensaje ="Bienvenido a la pagina de servicios")
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html',titulo ="contacto" , mensaje ="Bienvenido a la pagina de contacto")
+
+@app.route('/productos')
+def productos():
+    return render_template('productos.html',titulo ="productos" , mensaje ="Bienvenido a la pagina de productos")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5050)

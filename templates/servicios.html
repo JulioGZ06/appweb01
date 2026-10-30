@@ -1,11 +1,18 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 {% block content %}
-        <div class="container-fluid">
-            
-            <h1>{{ titulo }}</h1>
+  <div class="container-fluid">
+    <h1>{{ titulo }}</h1>
 
-            <p>{{ mensaje }}</p>
+    <p>{{ mensaje }}</p>
+    <div class="card" style="width: 18rem;">
+      <img src="{{ url_for('static', filename='img/productos/Don_Julio.png') }}" class="card-img-top" alt="Servicio de diseño de botellas de tequila" />
+      <div class="card-body">
+        <h5 class="card-title">Diseño de Botellas de Tequila</h5>
+        <p class="card-text">Decoracion de botellas de tequila tradicional a mano para cualquier ocasión.</p>
+        <a href="#" class="btn btn-primary">Más Información</a>
+      </div>
+    </div>
 
-            <p>Estos son los servicios que ofrecemos.</p>
-        </div>
+    <p>Estos son los servicios que ofrecemos.</p>
+  </div>
 {% endblock %}

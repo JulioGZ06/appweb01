@@ -5,7 +5,11 @@
 
 
             <h1>{{ titulo }}</h1>
-
+            <div class="text-center">
+                <img src="{{ url_for('static', filename='img/calabera.png') }}" 
+                alt="Dia de Muertos" class="img-fluid"
+                style="max-width: 300px; height: auto;">
+            </div>
             <p>{{ mensaje }}</p>
 
             <p>
